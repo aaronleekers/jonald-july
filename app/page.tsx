@@ -106,13 +106,22 @@ function Home(): JSX.Element {
     return data?.content ?? '';
   }
 
-  async function pdfLoad(); 
+  async function pdfLoad() {
+    console.log("input function here")
+  };
 
-  async function webLoad();
+  async function webLoad() {
+    console.log("input function here")
 
-  async function sourceDraft();
+  }
 
-  async function formatDraft();
+  async function sourceDraft(){
+    console.log("input function here")
+  }
+
+  async function formatDraft(){
+    console.log("input function here")
+  }
 
   async function handleSubmit23(e: React.FormEvent) {
     e.preventDefault();
@@ -130,9 +139,14 @@ function Home(): JSX.Element {
       const firstDraft = await getResponse(query);
       setChatLog([...chatLogNew, { user: "gpt", message: `${firstDraft}` }]);
       // ask for approval by placing a button below chatlog. If approved, continue, if denied, run getResponse and setChatLog again.
-      sourceDraft();
+      const sourcedDraft = await sourceDraft();
+      setChatLog([...chatLogNew, { user: "gpt", message: `${sourcedDraft}` }]);
       // ask for approval, if approved, continue, if denied, prompt why, run getResponse and setChatLog again, but modify getResponse to include edit notes.
-      formatDraft();
+      const formattedDraft = await formatDraft();
+      setChatLog([...chatLogNew, { user: "gpt", message: `${formattedDraft}` }]);
+      // ask for approval, if approved, continue to conversational edits, if denied, prompt why, run getResponse and setChatLog again, but modify getResponse to include edit notes
+      const finalDraft = await getResponse(query);
+      setChatLog([...chatLogNew, { user: "gpt", message: `${finalDraft}` }]);
     }
   }
   async function handleSubmit(e: React.FormEvent) {
