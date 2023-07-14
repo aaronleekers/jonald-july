@@ -1,0 +1,193 @@
+/* General styles */
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+  }
+  
+  .sidemenu {
+    background-color: #f5e9e9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 10px;
+  }
+  
+  .sidemenu-header {
+    font-size: 35px;
+    margin-top: 0;
+  }
+  
+  .side-menu-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Updated button color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .side-menu-button:hover {
+    background-color: #0056b3; /* Less intense accent */
+  }
+  
+  .side-menu-button:active {
+    background-color: #003080; /* Less intense accent */
+  }
+  
+  .chatbox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f5e9e9;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px;
+  }
+  
+  .chat-log {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-bottom: 0px;
+  }
+  
+  .paragraph {
+    padding-bottom: 5px; /* Optional: Add some spacing between paragraphs */
+    }
+  
+  .clearfix {
+    clear: both;
+  }
+  
+  .chat-message {
+    display: inline-block;
+    max-width: 80%;
+    margin-bottom: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 19px;
+  }
+  
+  .chatgpt {
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 1%;
+    border-radius: 15px;
+    width: 90%;
+  }
+  
+  .message {
+    margin: 0;
+    font-size: 16px;
+    padding: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+  
+  .input-field-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  
+  .chat-input-holder {
+    margin-top: 0px;
+    padding: 10px;
+    width: 100%
+  }
+  
+  .chat-input-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: black;
+    height: 50px;
+    background-color: white;
+    margin-top: 10px;
+  }
+  
+  
+  .submit-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Updated button color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    transition: background-color 0.3s ease;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ffffff00;
+    margin-bottom: 16px;
+  }
+  
+  .card:hover {
+    background-color: #f5f5f5;
+  }
+
+  .card > p {
+    font-size: 18px;
+    color: #000
+  }
+
+  .submit-button:hover {
+    background-color: #0056b3; /* Less intense accent */
+  }
+  
+  .submit-button:active {
+    background-color: #003080; /* Less intense accent */
+  }
+  
+  .sidemenu-header,
+  .message {
+    color: #333; /* Darker text color */
+  }
+  
+  /* Responsive styles */
+  @media screen and (min-width: 600px) {
+    .App {
+      flex-direction: row;
+    }
+  
+    .sidemenu {
+      width: 200px;
+      text-align: left;
+    }
+  
+    .chatbox {
+      flex: 1;
+      margin-left: 20px;
+    }
+  }
+  
