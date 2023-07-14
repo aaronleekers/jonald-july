@@ -6,6 +6,9 @@ import { Document } from 'langchain/document'
 import { timeout } from './config'
 import updateStatus from './app/page.tsx'
 
+// https://excalidraw.com/#json=ZstTIm1Gzq_5Vg3Emj4i4,vItbgfRiKKFCamrsJ8Bp2Q
+
+
 export const queryPineconeVectorStoreAndQueryLLM = async (
   client,
   indexName,
